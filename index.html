@@ -1,12 +1,40 @@
 <!DOCTYPE html><html lang="en"><head>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto">
+  <script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
- <style>
-</style>
+  </title style="font-size: 18px"> Markov Chains </title>
   </head>
+
   <body>
+    <h1>Markov Chains</h1>
+    <p>A vector with <strong>nonnegative</strong> entries that add up to one is called a <strong>probability vector.</strong>
+    A <strong>stochastic matrix</strong> is a square matrix whose columns are probability vectors. A <strong>Markov chain</strong> 
+  is a sequence of probability vectors together with a stochastic matrix <i>P</i> such that: </p>
+  <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mover><msub><mi>v</mi><mn>0</mn></msub><mo>&#x21C0;</mo></mover><mo>=</mo><mover><msub><mi>v</mi><mn>1</mn></msub><mo>&#x21C0;</mo></mover></math>
+    ,
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mover><msub><mi>v</mi><mn>1</mn></msub><mo>&#x21C0;</mo></mover><mo>=</mo><mover><msub><mi>v</mi><mn>2</mn></msub><mo>&#x21C0;</mo></mover></math>
+    ,
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mover><msub><mi>v</mi><mn>2</mn></msub><mo>&#x21C0;</mo></mover><mo>=</mo><mover><msub><mi>v</mi><mn>3</mn></msub><mo>&#x21C0;</mo></mover></math>
+    , ...
+
+  </p>
+  <p>
+    Thus, the Markov chain is described by the first-order difference equation:
+  </p>
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mover><msub><mi>v</mi><mi>k</mi></msub><mo>&#x21C0;</mo></mover><mo>=</mo><msub><mover><mi>v</mi><mo>&#x21C0;</mo></mover><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></math>
+  <p>
+   
+  </p> 
+  When a Markov chain of vectors in <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi mathvariant="normal">&#x211D;</mi><mi>n</mi></msup></math> describes a system or a sequence of experiments, the entries in <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mover><mi>v</mi><mo>&#x21C0;</mo></mover><mi>k</mi></msub></math> 
+  list the probabilities that the system is in each of <i>n</i> possible states, or the probabilities that the outcome of the experiment is one of the <i>n</i> possible outcomes. For this
+  reason, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mover><mi>v</mi><mo>&#x21C0;</mo></mover><mi>k</mi></msub></math> is often called the <strong>state vector</strong>.
+</p>
     <!-- <script src="generator.js"></script> -->
     <script src="sketch.js"></script>
   
